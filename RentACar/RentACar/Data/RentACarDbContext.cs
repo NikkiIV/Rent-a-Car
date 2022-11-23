@@ -6,12 +6,14 @@ namespace RentACar.Data
 {
     public class RentACarDbContext : IdentityDbContext
     {
-        public DbSet<Car> Cars { get; init; }
-
         public RentACarDbContext(
             DbContextOptions<RentACarDbContext> options)
             : base(options)
         {
         }
+
+        public DbSet<Car> Cars { get; init; }
+        public DbSet<Category> Categories { get; init; }
+
     }
 }
