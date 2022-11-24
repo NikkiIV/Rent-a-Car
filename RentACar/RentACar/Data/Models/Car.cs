@@ -17,7 +17,6 @@ namespace RentACar.Data.Models
         public string Model { get; set; }
 
         [Required]
-        [MaxLength(CarDescriptionMaxLenght)]
         public string Description { get; set; }
 
         [Required]
