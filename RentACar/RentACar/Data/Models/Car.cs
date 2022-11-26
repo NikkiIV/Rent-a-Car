@@ -27,5 +27,9 @@ namespace RentACar.Data.Models
         public int CategoryId { get; set; }
 
         public Category Category { get; init; }
+
+        public int DealerId { get; set; }
+
+        public Dealer Dealer { get; set; }
     }
 }
