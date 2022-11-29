@@ -32,6 +32,13 @@ namespace RentACar.Data
                .HasForeignKey(c => c.DealerId)
                .OnDelete(DeleteBehavior.Restrict);
 
+            builder
+                .Entity<Dealer>()
+                .HasOne<User>()
+                .WithOne()
+                .HasForeignKey<Dealer>(d => d.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             base.OnModelCreating(builder);
         }
 
