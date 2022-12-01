@@ -16,6 +16,9 @@ namespace RentACar.Data
         public DbSet<Category> Categories { get; init; }
         public DbSet<Dealer> Dealers { get; set; }
 
+        public DbSet<History> Histories { get; init; }
+        public DbSet<User> Users { get; init; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder
