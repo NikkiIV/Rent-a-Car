@@ -14,5 +14,16 @@
             public const int DealerPhoneMinLength = 6;
             public const int DealerPhoneMaxLength = 30;
         }
+
+        public class User
+        {
+            public const int FullNameMinLength = 5;
+            public const int FullNameMaxLength = 40;
+        }
+
+        public class Category
+        {
+            public const int CategoryNameMaxLength = 25;
+        }
     }
 }
