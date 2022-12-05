@@ -2,7 +2,7 @@
 
 namespace RentACar.Data.Models
 {
-    using static DataConstants;
+    using static DataConstants.Car;
 
     public class Car
     {

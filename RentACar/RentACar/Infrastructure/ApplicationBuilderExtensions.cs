@@ -14,6 +14,7 @@ namespace RentACar.Infrastructure
             var services = serviceScope.ServiceProvider;
 
             MigrateDatabase(services);
+            SeedCategories(services);
 
             return app;
         }
@@ -23,6 +24,29 @@ namespace RentACar.Infrastructure
             var data = services.GetRequiredService<RentACarDbContext>();
 
             data.Database.Migrate();
+        }
+
+        private static void SeedCategories(IServiceProvider services)
+        {
+            var data = services.GetRequiredService<RentACarDbContext>();
+
+            if (data.Categories.Any())
+            {
+                return;
+            }
+
+            data.Categories.AddRange(new[]
+            {
+                new Category { Name = "Mini"},
+                new Category { Name = "Economi"},
+                new Category { Name = "Midsize"},
+                new Category { Name = "Large"},
+                new Category { Name = "SUV"},
+                new Category { Name = "Vans"},
+                new Category { Name = "Luxery"}
+            });
+
+            data.SaveChanges();
         }
     }
 }
