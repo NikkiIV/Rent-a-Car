@@ -11,5 +11,8 @@ namespace RentACar.Data.Models
 
         [Required]
         public string Description { get; set; }
+
+        [Required]
+        public string Comment { get; set; }
     }
 }

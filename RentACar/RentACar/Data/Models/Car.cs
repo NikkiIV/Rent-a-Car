@@ -31,5 +31,8 @@ namespace RentACar.Data.Models
         public int DealerId { get; set; }
 
         public Dealer Dealer { get; set; }
+
+        [Required]
+        public string Comment { get; set; }
     }
 }
