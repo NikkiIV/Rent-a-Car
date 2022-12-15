@@ -16,8 +16,10 @@ namespace RentACar.Data
         public DbSet<Category> Categories { get; init; }
         public DbSet<Dealer> Dealers { get; set; }
 
+        //have to delete classes from down up
         public DbSet<History> Histories { get; init; }
         public DbSet<User> Users { get; init; }
+        public DbSet<test> Tests { get; init; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
