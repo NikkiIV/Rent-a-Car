@@ -17,7 +17,7 @@ namespace RentACar.Controllers
         {
             return View();
         }
-
+         
         private IActionResult View()
         {
             throw new NotImplementedException();
@@ -27,7 +27,7 @@ namespace RentACar.Controllers
         {
             return View();
         }
-
+         
         
     }
 }
