@@ -1,2 +1,2 @@
-# Rent-a-Car
-ASP.NET Core Web Project
+# RentACar
+ASP.NET Core Project
